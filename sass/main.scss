@@ -1,0 +1,208 @@
+@import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
+
+:root {
+  --ARMS---black: #201F1F;
+  --ARMS---white: #FFFFFF;
+  --ARMS---gray: #E0E0E0;
+  --ARMS---yellow: #F9C406;
+  --ARMS---blue: #6506F9;
+  --ARMS---blue-dark: #4604AE;
+  --swiper-pagination-bullet-height: 4px;
+  --swiper-pagination-bullet-horizontal-gap: 0px;
+  --swiper-pagination-bullet-vertical-gap: 0px;
+  --swiper-pagination-bullet-inactive-color: transparent;
+  --swiper-pagination-color: transparent;
+  --swiper-pagination-text-color: black;
+  --swiper-pagination-right: 198px;
+  --swiper-pagination-top: 101.8%;
+
+  --breakpoint-sm: 604px;
+  --breakpoint-lg: 1404px;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  background: #201F1F;
+  filter: brightness(0);
+  animation: fadeIn 1s ease-in-out forwards;
+  font-family: 'Gilroy', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    filter: brightness(0);
+  }
+
+  100% {
+    filter: brightness(1);
+  }
+}
+
+.swiper-pagination-bullet {
+  border-radius: 0;
+  width: 96px;
+  height: 32px;
+  transform-origin: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet p {
+  font-size: 24px;
+  width: 100%;
+  height: 100%;
+  color: var(--swiper-pagination-text-color);
+  transition: all ease-in-out 250ms;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  width: 96px;
+  top: var(--swiper-pagination-top);
+}
+
+.swiper-slide:nth-of-type(1) {
+  background: radial-gradient(#313030, var(--ARMS---black));
+  color: white;
+}
+
+.swiper-slide:nth-of-type(2) {
+  background: var(--ARMS---white, #FFF);
+  color: var(--ARMS---black);
+}
+
+.swiper-slide:nth-of-type(3) {
+  background: var(--ARMS---yellow, #F9C406);
+  color: var(--ARMS---black);
+}
+
+.swiper-slide:nth-of-type(4) {
+  background: radial-gradient(#313030, var(--ARMS---black));
+  color: white;
+}
+
+.swiper-slide {
+  h5 {
+    font-size: 100px;
+  }
+
+  p {
+    @extend .text-arms-black;
+  }
+
+  &.light {
+
+    h5,
+    p {
+      @extend .text-arms-white;
+    }
+  }
+
+  $_top-left: 0% 0%;
+  $_top-right: 100% 0%;
+  $_bottom-left: 0% 100%;
+  $_bottom-right: 100% 100%;
+
+  .anim-slide {
+
+    transition: clip-path 400ms ease-in-out;
+    transition-delay: 1s;
+    clip-path: polygon($_top-left, $_bottom-left, $_bottom-left, $_top-left);
+
+    &.anim-slide-left {
+      clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 100% 0%);
+    }
+
+    &.anim-slide-up {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+
+    &.anim-slide-down {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    }
+  }
+
+  &.swiper-slide-active {
+    .anim-slide {
+      clip-path: polygon($_top-left, $_bottom-left, $_bottom-right, $_top-right);
+      transition-delay: 0s;
+
+      &.anim-slide-left {
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+      }
+
+      &.anim-slide-up {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+      }
+
+      &.anim-slide-down {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      }
+    }
+  }
+
+  @media (min-width: 604px) {
+    h5 {
+      font-size: 125px;
+    }
+  }
+
+  @media (min-width: 1404px) {
+    h5 {
+      font-size: 150px;
+    }
+  }
+}
+
+.swiper-slide img.anim-slide.anim-slide-left {
+  left: -100%;
+  transition: all 400ms;
+}
+
+.swiper-slide.swiper-slide-active img.anim-slide.anim-slide-left {
+  left: 0px;
+}
+
+.swiper-slide img.anim-slide.anim-slide-right {
+  right: -100%;
+  transition: all 400ms;
+}
+
+.swiper-slide.swiper-slide-active img.anim-slide.anim-slide-right {
+  right: 0px;
+}
+
+header {
+  svg {
+    color: var(--ARMS---white);
+    transition: color ease-in-out 150ms;
+  }
+
+  &.dark svg {
+    color: var(--ARMS---black);
+  }
+
+  &.light {
+    --swiper-pagination-text-color: white;
+  }
+}
+
+.anim-slide {
+  &.transition-all {
+    transition-property: all;
+  }
+}
+
+.left-4pc {
+    left: 4%;
+}
