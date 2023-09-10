@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "arms-black": "#201F1F",
+        "arms-black": {  DEFAULT: '#201F1F',  50: '#BAB7B7',  100: '#B0ADAD',  200: '#9C9898',  300: '#878484',  400: '#736F6F',  500: '#5E5B5B',  600: '#494747',  700: '#353333',  800: '#201F1F',  900: '#040303',  950: '#000000'},
         "arms-white": "#FFFFFF",
         "arms-gray": "#E0E0E0",
         "arms-light-gray": "#535353",
