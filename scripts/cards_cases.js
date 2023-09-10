@@ -1,4 +1,5 @@
 const initializeCards = () => {
+
     let currentCardindex = -1;
     let isCardOpen = false; 
 
@@ -96,6 +97,16 @@ const initializeCards = () => {
             expandCard();
         }, 300);
     });
+
+    const targetCard = window.location.href.split("#")[1].toUpperCase();
+    const cardsSubtitles = cards.map(card => (card.subtitle.toUpperCase()));
+    console.log(targetCard);
+    console.log(cardsSubtitles);
+    if(cardsSubtitles.includes(targetCard)) {
+        console.log(targetCard);
+        currentCardindex = cardsSubtitles.indexOf(targetCard);
+        expandCard();
+    }
 }
 
 initializeCards();

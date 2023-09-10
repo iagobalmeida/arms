@@ -45,7 +45,7 @@ const initializeSwiper = (slides, swiperSettings) => {
     headerEl.classList.add(slides[slideIndex].classList);
   };
   
-  const targetSection = window.location.href.split("/#")[1];
+  const targetSection = window.location.href.split("#")[1];
   
   swiper.on("init", function () {
     if (slidesTitles.includes(targetSection)) {
