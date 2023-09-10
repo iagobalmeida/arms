@@ -5,4 +5,10 @@
     .h-max {
       height: max-content;
     }
+    .saturate-0 {
+      filter: saturate(0);
+    }
+    .transition-all {
+      transition: all 150ms ease-in-out;
+    }
 }

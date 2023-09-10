@@ -76,3 +76,18 @@ header {
     }
   }
 }
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-arms-white;
+}

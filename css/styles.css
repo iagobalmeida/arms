@@ -648,6 +648,10 @@ video {
 .flex-grow{
       flex-grow: 1;
 }
+.rotate-180{
+      --tw-rotate: 180deg;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .cursor-pointer{
       cursor: pointer;
 }
@@ -706,18 +710,6 @@ video {
 .bg-arms-black{
       --tw-bg-opacity: 1;
       background-color: rgb(32 31 31 / var(--tw-bg-opacity));
-}
-.bg-arms-black-300{
-      --tw-bg-opacity: 1;
-      background-color: rgb(135 132 132 / var(--tw-bg-opacity));
-}
-.bg-arms-black-400{
-      --tw-bg-opacity: 1;
-      background-color: rgb(115 111 111 / var(--tw-bg-opacity));
-}
-.bg-arms-black-500{
-      --tw-bg-opacity: 1;
-      background-color: rgb(94 91 91 / var(--tw-bg-opacity));
 }
 .bg-arms-black-600{
       --tw-bg-opacity: 1;
@@ -822,6 +814,15 @@ video {
 .text-white{
       --tw-text-opacity: 1;
       color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.saturate-0{
+      --tw-saturate: saturate(0);
+      filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.transition-all{
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
 }
 .transition-colors{
       transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
@@ -960,6 +961,12 @@ video {
       height: -moz-max-content;
       height: max-content;
     }
+.cases .saturate-0 {
+      filter: saturate(0);
+    }
+.cases .transition-all {
+      transition: all 150ms ease-in-out;
+    }
 :root {
   --ARMS---black: #201f1f;
   --ARMS---white: #ffffff;
@@ -1027,14 +1034,33 @@ header.light {
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       transition-duration: 150ms;
 }
+.cases .button div {
+      transition: all 150ms ease-in-out;
+    }
 .button:hover div{
       gap: 6rem;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb{
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .hover\:opacity-75:hover{
       opacity: 0.75;
 }
 .hover\:brightness-105:hover{
       --tw-brightness: brightness(1.05);
+      filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.hover\:saturate-100:hover{
+      --tw-saturate: saturate(1);
       filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 @media (min-width: 640px){
