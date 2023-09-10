@@ -1,0 +1,93 @@
+@import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
+@import "./home.scss";
+@import "./cases.scss";
+
+:root {
+  --ARMS---black: #201f1f;
+  --ARMS---white: #ffffff;
+  --ARMS---gray: #e0e0e0;
+  --ARMS---yellow: #f9c406;
+  --ARMS---blue: #6506f9;
+  --ARMS---blue-dark: #4604ae;
+  --swiper-pagination-bullet-height: 4px;
+  --swiper-pagination-bullet-horizontal-gap: 0px;
+  --swiper-pagination-bullet-vertical-gap: 0px;
+  --swiper-pagination-bullet-inactive-color: transparent;
+  --swiper-pagination-color: transparent;
+  --swiper-pagination-text-color: black;
+  --swiper-pagination-right: 198px;
+  --swiper-pagination-top: 101.8%;
+
+  --breakpoint-sm: 604px;
+  --breakpoint-lg: 1404px;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  background: #201f1f;
+  filter: brightness(0);
+  animation: fadeIn 1s ease-in-out forwards;
+  font-family: "Gilroy", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    filter: brightness(0);
+  }
+
+  100% {
+    filter: brightness(1);
+  }
+}
+
+
+header {
+  svg {
+    color: var(--ARMS---white);
+    transition: color ease-in-out 150ms;
+  }
+
+  &.dark svg {
+    color: var(--ARMS---black);
+  }
+
+  &.light {
+    --swiper-pagination-text-color: white;
+  }
+}
+
+  
+.button {
+  div {
+    @apply px-12 py-11 flex flex-row items-center gap-6 text-xl cursor-pointer transition-all;
+  }
+  &:hover {
+    div {
+      @apply gap-24;
+    }
+  }
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-arms-white;
+}
