@@ -11,4 +11,17 @@
     .transition-all {
       transition: all 150ms ease-in-out;
     }
+
+    .anim-slide {
+      animation: clipPath 300ms ease-in-out forwards;
+    }
+
+    @keyframes clipPath {
+      0% {
+        clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
+      }
+      100% {
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+      }
+    }
 }

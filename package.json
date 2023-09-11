@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production postcss sass/main.scss -o css/styles.css --use-cssnano",
-    "start": "postcss sass/main.scss -o css/styles.css --watch"
+    "start": "postcss assets/sass/main.scss -o assets/css/styles.css --watch"
   },
   "author": "",
   "license": "ISC",

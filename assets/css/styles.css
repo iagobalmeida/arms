@@ -711,10 +711,6 @@ video {
       --tw-bg-opacity: 1;
       background-color: rgb(32 31 31 / var(--tw-bg-opacity));
 }
-.bg-arms-black-400{
-      --tw-bg-opacity: 1;
-      background-color: rgb(115 111 111 / var(--tw-bg-opacity));
-}
 .bg-arms-black-500{
       --tw-bg-opacity: 1;
       background-color: rgb(94 91 91 / var(--tw-bg-opacity));
@@ -777,9 +773,6 @@ video {
 }
 .pt-12{
       padding-top: 3rem;
-}
-.pt-64{
-      padding-top: 16rem;
 }
 .text-center{
       text-align: center;
@@ -975,6 +968,19 @@ video {
 .cases .transition-all {
       transition: all 150ms ease-in-out;
     }
+.cases .anim-slide {
+      animation: clipPath 300ms ease-in-out forwards;
+    }
+@keyframes clipPath {
+      0% {
+        -webkit-clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
+                clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
+      }
+      100% {
+        -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+                clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+      }
+    }
 :root {
   --ARMS---black: #201f1f;
   --ARMS---white: #ffffff;
@@ -1026,6 +1032,14 @@ header.dark svg {
 header.light {
     --swiper-pagination-text-color: white;
   }
+.button{
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+}
+.cases .button {
+      transition: all 150ms ease-in-out;
+    }
 .button div{
       display: flex;
       cursor: pointer;
@@ -1047,6 +1061,10 @@ header.light {
     }
 .button:hover div{
       gap: 6rem;
+}
+.button:active{
+      --tw-brightness: brightness(.75);
+      filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .rotate-180 {
   transform: rotate(180deg);
