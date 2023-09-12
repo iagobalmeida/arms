@@ -35,50 +35,66 @@ const initializeCards = () => {
         })
     }
 
+    const hideElem = (elem, include_anim=true, anim_down=false) => {
+        if(include_anim) {
+            elem.classList.remove('anim-slide');
+            if(anim_down) elem.classList.remove('anim-slide-down');
+            elem.classList.add('anim-slide-reverse');
+            void elem.offsetWidth
+            setTimeout(() => {
+                elem.classList.add('hidden');
+                elem.classList.remove('anim-slide-reverse');
+            }, 300);
+        } else {
+            elem.classList.add('hidden');
+        }
+    }
+
+    const showElem = (elem, include_anim=true, anim_down=false) => {
+        elem.classList.remove('hidden');
+        if(include_anim) {
+            elem.classList.add('anim-slide');
+            if(anim_down) elem.classList.add('anim-slide-down');
+        }
+    }
+
     const expandCard = () => {
         const card = cards[currentCardindex];
         if(isCardOpen) return;
         isCardOpen = true;
         setCardTtitle(card.title, card.subtitle);
         setCardImages(card.images);
-        pageTitleWrapper.classList.add('hidden');
-        cardsWrapper.classList.add('hidden');
 
-        cardTitleWrapper.classList.remove('hidden');
-        cardDetailWrapper.classList.remove('hidden');
+        hideElem(cardsWrapper);
+        hideElem(pageTitleWrapper);
+
+        showElem(cardTitleWrapper)
+        showElem(cardDetailWrapper, false);
+        showElem(cardDetailImagesWrapper, true);
+
         cardDetailNagivation.classList.remove('hidden');
+
         backgroundSquare.classList.remove('bg-arms-yellow');
         backgroundSquare.classList.add('bg-arms-white');
         body.classList.remove('overflow-y-hidden');
-
-        cardTitleWrapper.classList.add('anim-slide');
-        cardDetailImagesWrapper.classList.add('anim-slide');
-        pageTitleWrapper.classList.remove('anim-slide');
-        void pageTitleWrapper.offsetWidth
-        cardsWrapper.classList.remove('anim-slide');
-        void cardsWrapper.offsetWidth
     }
 
     const collapseCard = () => {
         if(!isCardOpen) return;
         isCardOpen = false;
         setCardTtitle('', '');
-        pageTitleWrapper.classList.remove('hidden');
-        cardsWrapper.classList.remove('hidden');
-        cardTitleWrapper.classList.add('hidden');
+        showElem(cardsWrapper, true, true);
+        showElem(pageTitleWrapper, true, false);
 
-        cardDetailWrapper.classList.add('hidden');
+        hideElem(cardTitleWrapper, false);
+        hideElem(cardDetailWrapper, false, true);
+        hideElem(cardDetailImagesWrapper, true, true);
+        
         cardDetailNagivation.classList.add('hidden');
+
         backgroundSquare.classList.add('bg-arms-yellow');
         backgroundSquare.classList.remove('bg-arms-white');
         body.classList.add('overflow-y-hidden');
-
-        pageTitleWrapper.classList.add('anim-slide');
-        cardsWrapper.classList.add('anim-slide');
-        cardTitleWrapper.classList.remove('anim-slide');
-        void cardTitleWrapper.offsetWidth
-        cardDetailImagesWrapper.classList.remove('anim-slide');
-        void cardDetailImagesWrapper.offsetWidth
     }
 
     cards.forEach((card, cardIndex) => {
@@ -96,9 +112,11 @@ const initializeCards = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         setTimeout(() => {
             collapseCard();
-            currentCardindex += 1;
-            currentCardindex = (currentCardindex >= cards.length ? 0 : currentCardindex);
-            expandCard();
+            setTimeout(() => {
+                currentCardindex += 1;
+                currentCardindex = (currentCardindex >= cards.length ? 0 : currentCardindex);
+                expandCard();
+            }, 400)
         }, 300);
     });
 
@@ -106,9 +124,11 @@ const initializeCards = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         setTimeout(() => {
             collapseCard();
-            currentCardindex -= 1;
-            currentCardindex = (currentCardindex <= 0 ? cards.length - 1 : currentCardindex);
-            expandCard();
+            setTimeout(() => {
+                currentCardindex -= 1;
+                currentCardindex = (currentCardindex <= 0 ? cards.length - 1 : currentCardindex);
+                expandCard();
+            }, 400)
         }, 300);
     });
 
