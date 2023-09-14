@@ -150,7 +150,7 @@ const initializeCards = () => {
 
     window.addEventListener('popstate', (e) => {
         console.log(e.state)
-        if(e.state && e.state.cardIndex) {
+        if(e.state && typeof e.state.cardIndex == 'number') {
             console.log(e.state.cardIndex);
             isCardOpen = false;
             currentCardindex = e.state.cardIndex;
