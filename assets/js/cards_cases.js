@@ -81,16 +81,21 @@ const initializeCards = () => {
         showElem(cardDetailNagivation);
 
         backgroundSquare.classList.remove('bg-arms-yellow');
-        backgroundSquare.classList.add('bg-arms-full-black');
+        backgroundSquare.classList.add('bg-black');
+        backgroundSquare.classList.add('top-0');
+
         body.classList.remove('overflow-y-hidden');
 
         if(insertHistory) history.pushState({cardIndex: currentCardindex}, null);
+
+        setTimeout(() => {
+            backgroundSquare.style.height = `${cardDetailImagesWrapper.clientHeight}px`;
+        }, 200);
     }
 
     const collapseCard = () => {
         if(!isCardOpen) return;
         isCardOpen = false;
-        window.scrollTo({top:200, behavior:'smooth'});
         setTimeout(() => {
             setCardTtitle();
             showElem(cardsWrapper, true, true);
@@ -103,6 +108,10 @@ const initializeCards = () => {
             
             backgroundSquare.classList.add('bg-arms-yellow');
             backgroundSquare.classList.remove('bg-arms-full-black');
+            backgroundSquare.classList.remove('bg-black');
+            backgroundSquare.classList.remove('top-0');
+            backgroundSquare.style.height = '100%';
+
             body.classList.add('overflow-y-hidden');
         }, 200)
     }
@@ -122,20 +131,20 @@ const initializeCards = () => {
         isCardOpen = false;
         currentCardindex += 1;
         currentCardindex = (currentCardindex >= cards.length ? 0 : currentCardindex);
-        expandCard();
+        window.scrollTo({top:0, behavior:'smooth'});
         setTimeout(() => {
-            window.scrollTo({top:200, behavior:'smooth'});
-        }, 400)
+            expandCard();
+        }, 250)
     });
 
     cardDetailNavigationPrev.addEventListener('click', () => {
         isCardOpen = false;
         currentCardindex -= 1;
         currentCardindex = (currentCardindex <= 0 ? cards.length - 1 : currentCardindex);
-        expandCard();
+        window.scrollTo({top:0, behavior:'smooth'});
         setTimeout(() => {
-            window.scrollTo({top:200, behavior:'smooth'});
-        }, 400)
+            expandCard();
+        }, 250)
     });
 
     pageBackNagivation.addEventListener('click', () => {
@@ -144,19 +153,17 @@ const initializeCards = () => {
     });
 
     window.addEventListener('scroll', () => {
-        console.log('scroll');
         cardDetailNagivation.style.top = `calc(100% + ${window.scrollY -224}px`
     });
 
     window.addEventListener('popstate', (e) => {
-        console.log(e.state)
         if(e.state && typeof e.state.cardIndex == 'number') {
-            console.log(e.state.cardIndex);
             isCardOpen = false;
             currentCardindex = e.state.cardIndex;
             expandCard(false);
             e.preventDefault();
         } else {
+            console.log('collapse')
             collapseCard();
         }
     })

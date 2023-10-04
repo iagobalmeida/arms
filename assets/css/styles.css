@@ -1011,6 +1011,9 @@ video {
 .cases .transition-all {
       transition: all 150ms ease-in-out;
     }
+.cases .bg-black {
+      background: black;
+    }
 .cases .anim-slide {
       animation: clipPath 250ms ease-in-out forwards;
     }
@@ -1056,39 +1059,6 @@ video {
     }
 .criamos .transition-all {
       transition: all 150ms ease-in-out;
-    }
-.criamos .anim-slide {
-      animation: clipPath 250ms ease-in-out forwards;
-    }
-.criamos .anim-slide.anim-slide-down {
-        animation: clipPathDown 250ms ease-in-out forwards;
-      }
-.criamos .anim-slide.anim-slide-reverse {
-        animation-direction: reverse;
-      }
-@keyframes clipPathDown {
-      0% {
-        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
-                clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
-        opacity: 0;
-      }
-      100% {
-        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-        opacity: 1;
-      }
-    }
-@keyframes clipPath {
-      0% {
-        -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-                clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-        opacity: 0;
-      }
-      100% {
-        -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
-                clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
-        opacity: 1;
-      }
     }
 :root {
   --ARMS---black: #201f1f;
@@ -1193,12 +1163,12 @@ header.light {
       --tw-bg-opacity: 1;
       background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.hover\:bg-arms-black-600:hover{
+      --tw-bg-opacity: 1;
+      background-color: rgb(73 71 71 / var(--tw-bg-opacity));
+}
 .hover\:opacity-75:hover{
       opacity: 0.75;
-}
-.hover\:brightness-105:hover{
-      --tw-brightness: brightness(1.05);
-      filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .hover\:saturate-100:hover{
       --tw-saturate: saturate(1);

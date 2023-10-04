@@ -18,24 +18,23 @@ window.addEventListener('load', () => {
             el.classList.remove('hidden');
         });
 
-        const tabClasses = [
-            ['text-arms-black', 'bg-arms-white'],
-            ['text-arms-white', 'bg-arms-black-600'],
-            ['text-arms-white', 'bg-arms-black-700'],
-            ['text-arms-white', 'bg-arms-black'],
-        ];
+        const tabClasses = {
+            active: ['text-arms-black', 'bg-arms-white'],
+            inactive: ['text-arms-white', 'bg-arms-black', 'hover:bg-arms-black-600']
+        }
+
         const getTabClasses = (val) => {
-            val = (val < 0) ? tabClasses.length + val : val;
-            return tabClasses[val];
+            return val == tab ? tabClasses.active : tabClasses.inactive
         }
 
         document.querySelectorAll('[data-tab-toggle]').forEach((el, elIndex) => {
-            tabClasses.forEach(classes => {
-                classes.forEach(_class => el.classList.remove(_class));
+            ['hover:bg-arms-black-600', 'text-arms-black', 'text-arms-white', 'bg-arms-white', 'bg-arms-black'].forEach(_class => {
+                el.classList.remove(_class);
             });
 
-            const classes = getTabClasses(elIndex - currentTab);
+            const classes = getTabClasses(elIndex);
             classes.forEach(_class => el.classList.add(_class));
+
 
             el.querySelector('svg').classList.remove('rotate-90');
             if(elIndex == currentTab) el.querySelector('svg').classList.add('rotate-90');
