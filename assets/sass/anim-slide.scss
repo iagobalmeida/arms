@@ -1,0 +1,39 @@
+:not(img).anim-slide {
+  transition: clip-path 400ms ease-in-out;
+  transition-delay: 1s;
+  clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
+
+  &.anim-slide-left {
+    clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 100% 0%);
+  }
+
+  &.anim-slide-up {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+
+  &.anim-slide-down {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  }
+}
+
+:not(img).anim-slide.active {
+    clip-path: polygon(
+        0% 0%,
+        0% 100%,
+        100% 100%,
+        100% 0%
+    );
+    transition-delay: 0s;
+
+    &.anim-slide-left {
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+    }
+
+    &.anim-slide-up {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+
+    &.anim-slide-down {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
