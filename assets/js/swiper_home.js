@@ -2,8 +2,8 @@ import Swiper from "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs
 
 const slides = [
   { title: "somos", classList: "light" },
-  { title: "capicce", classList: "dark" },
-  { title: "projetar", classList: "dark" },
+  { title: "capricho", classList: "dark" },
+  { title: "método", classList: "dark" },
   { title: "conta", classList: "light" },
 ];
 
