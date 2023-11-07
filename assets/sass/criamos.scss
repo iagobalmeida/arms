@@ -11,4 +11,28 @@
     .transition-all {
       transition: all 150ms ease-in-out;
     }
+    [data-tab-toggle] {
+      position: relative;
+      span, svg {
+        z-index: 2;
+      }
+      &.inactive {
+        animation: tabInactive 1s ease-in-out forwards;
+      }
+    }
+    .tab-indicator {
+      transition: all 250ms ease-in-out;
+      &.on-0 {
+        left: 0%;
+      }
+      &.on-1 {
+        left: 25%;
+      }
+      &.on-2 {
+        left: 50%;
+      }
+      &.on-3 {
+        left: 75%;
+      }
+    }
 }
