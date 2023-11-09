@@ -119,4 +119,29 @@
     .left-4pc {
       left: 4%;
     }
+
+    .home-img {
+      @apply absolute;
+      @apply top-0;
+      @apply bottom-0;
+      @apply z-20;
+      @apply pointer-events-none;
+      height: 100%;
+    }
+
+    input, textarea {
+      @apply bg-transparent;
+      @apply border-b-2;
+      @apply border-b-arms-black-600;
+      color: white;
+      &:active, &:focus {
+        border-color: white;
+        color: white;
+        outline: none;
+
+      }
+      &:placeholder-shown {
+        @apply text-arms-black-600;
+      }
+    }
   }

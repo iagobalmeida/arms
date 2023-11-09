@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
     const tabIndicatorClassList = [...tabIndicator.classList];
     const tabClasses = {
         active: ['text-arms-black', 'active'],
-        inactive: ['text-arms-white', 'inactive']
+        inactive: ['text-arms-white', 'hover:bg-arms-black-700', 'inactive']
     }
 
     const setCurrentTab = (tab) => {
@@ -40,4 +40,6 @@ window.addEventListener('load', () => {
         const tab = parseInt(el.getAttribute('data-tab-toggle'));
         setCurrentTab(tab);
     });
+
+    setCurrentTab(0);
 });

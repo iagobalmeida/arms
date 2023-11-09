@@ -153,7 +153,9 @@
       <!-- Swiper -->
       <div class="swiper-wrapper">
         <!-- Screen 01 - Somos -->
-        <div class="swiper-slide grid h-screen w-screen grid-rows-2 grid-cols-2 bg-arms-black light">
+        <div data-hash="somos" class="swiper-slide grid h-screen w-screen grid-rows-2 grid-cols-2 bg-arms-black light">
+            <!-- Image -->
+            <img src="assets/imgs/home_01.png" alt="" class="home-img">
             <!-- Content -->
             <div class="bg-arms-blue row-start-2 col-start-1 anim-slide"></div>
             <div class="row-start-2 col-start-2 grid grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 grid-rows-4">
@@ -175,9 +177,11 @@
             </div>
         </div>
         <!-- Screen 02 - Capicce -->
-        <div class="swiper-slide grid h-screen w-screen grid-rows-3 grid-cols-9 bg-arms-white">
+        <div data-hash="capricho" class="swiper-slide grid h-screen w-screen grid-rows-3 grid-cols-9 bg-arms-white">
             <!-- Header -->
             <div class="col-span-9"></div>
+            <!-- Image -->
+            <img src="assets/imgs/home_02.png" alt="" class="home-img right-0">
             <!-- Content -->
             <div class="col-start-2 col-span-5 grid grid-rows-2 grid-cols-5">
                 <h5 class="col-span-3 leading-none font-extrabold anim-slide anim-slide-down text-title">capicce!</h5>
@@ -208,10 +212,11 @@
             <div class="col-span-3 bg-arms-yellow"></div>
         </div>
         <!-- Screen 03 - Método -->
-        <div class="swiper-slide grid h-screen w-screen grid-rows-3 grid-cols-9 bg-arms-yellow">
+        <div data-hash="método" class="swiper-slide grid h-screen w-screen grid-rows-3 grid-cols-9 bg-arms-yellow">
             <!-- Header -->
             <div class="col-span-9"></div>
-
+            <!-- Image -->
+            <img src="assets/imgs/home_03.png" alt="" class="home-img">
             <!-- Content -->
             <div class="col-span-3 bg-arms-white"></div>
             <div class="col-span-6 grid grid-cols-4 grid-rows-2 ps-11">
@@ -241,46 +246,57 @@
             </div>
         </div>
         <!-- Screen 03 - Conte -->
-        <div class="swiper-slide grid h-screen w-screen grid-rows-2 grid-cols-2 bg-arms-black">
-            <div class="col-start-2 flex flex-col justify-end ps-11">
-                <h5 class="leading-none font-extrabold anim-slide anim-slide-down text-title text-arms-white">conte</h5>
-                <span class="font-light text-xl text-arms-white">
-                    pra gente! Adoramos ouvir histórias
-                    <br>
-                    e amamos fazer parte delas.
-                </span>
-            </div>
-            <div class="row-start-2 bg-arms-yellow grid grid-rows-2 grid-cols-2">
-                <div class="col-start-2 row-start-2 bg-arms-white"></div>
-            </div>
-            <div class="row-start-2 grid grid-rows-2 grid-cols-3">
-                <div class="col-span-2">
-
+        <div data-hash="conta" class="swiper-slide grid h-screen w-screen grid-rows-2 grid-cols-2 bg-arms-black">
+          <!-- Image -->
+          <img src="assets/imgs/home_04.png" alt="" class="home-img">
+          <!-- Content -->
+          <div class="col-start-2 flex flex-col justify-end ps-11 pb-11">
+              <h5 class="leading-none font-extrabold anim-slide anim-slide-down text-title text-arms-white">conte</h5>
+              <span class="font-light text-xl text-arms-white">
+                  pra gente! Adoramos ouvir histórias
+                  <br>
+                  e amamos fazer parte delas.
+              </span>
+          </div>
+          <div class="row-start-2 bg-arms-yellow grid grid-rows-2 grid-cols-2 anim-slide anim-slide-up">
+              <div class="col-start-2 row-start-2 bg-arms-white"></div>
+          </div>
+          <div class="row-start-2 grid grid-rows-2 grid-cols-3">
+              <div class="col-span-2 flex flex-col gap-9 px-10">
+                <input class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="nome" id="input-nome" placeholder="nome:">
+                <div class="flex flex-row gap-9 justify-stretch items-center">
+                  <input class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="numero" id="input-numero" placeholder="número:">
+                  <input class="w-full bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="email" id="input-email" placeholder="e-mail:">
                 </div>
-                <div class="grid grid-rows-5 col-span-3">
-                    <div class="bg-arms-blue row-span-2">
-        
-                    </div>
-                    <div class="bg-arms-white row-span-3 grid grid-cols-3">
-                        <div class="flex flex-col items-start justify-center text-arms-black">
-                            <b>OFFICE</b>
-                            <p>
-                                Rua Regente Feijó, 673
-                                <br>
-                                Centro - Piracicaba-SP
-                            </p>
-                        </div>
-                        <div class="flex flex-col items-start justify-center text-arms-black">
-                            <b>CONTACT</b>
-                            <p>
-                                conte@arms.design
-                                <br>
-                                19 96404.4711
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <textarea class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" name="mensagem" id="input-mensagem" placeholder="conta tudo:"></textarea>
+              </div>
+              <div class="grid grid-rows-5 col-span-3">
+                  <a class="row-span-2 text-arms-white bg-arms-blue flex pl-10 items-center gap-4 text-lg anim-slide anim-slide-up cursor-pointer">
+                      ENVIAR
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="9" viewBox="0 0 32 9" fill="currentColor">
+                        <path d="M32 4.48623L27.1335 0L26.2145 0.84865L29.5402 3.91408H0V5.11464H29.5207L26.2275 8.15135L27.1465 9L32 4.52573L31.9792 4.50539L32 4.48623Z" fill="currentColor"/>
+                      </svg>
+                  </a>
+                  <div class="bg-arms-white row-span-3 grid grid-cols-3">
+                      <div class="flex flex-col items-start justify-center text-arms-black">
+                          <b>OFFICE</b>
+                          <p>
+                              Rua Regente Feijó, 673
+                              <br>
+                              Centro - Piracicaba-SP
+                          </p>
+                      </div>
+                      <div class="flex flex-col items-start justify-center text-arms-black">
+                          <b>CONTACT</b>
+                          <p>
+                              conte@arms.design
+                              <br>
+                              19 96404.4711
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
         </div>
       </div>
     </main>

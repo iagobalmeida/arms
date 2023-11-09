@@ -11,6 +11,9 @@ const swiperSettings = {
   direction: "vertical",
   loop: false,
   init: false,
+  hashNavigation: {
+    watchState: true,
+  },
   mousewheel: {
     sensitivity: 1,
   },
@@ -45,7 +48,7 @@ const initializeSwiper = (slides, swiperSettings) => {
     headerEl.classList.add(slides[slideIndex].classList);
   };
   
-  const targetSection = window.location.href.split("#")[1];
+  const targetSection = decodeURIComponent(window.location.hash.substring(1))
   
   swiper.on("init", function () {
     if (slidesTitles.includes(targetSection)) {
@@ -57,6 +60,7 @@ const initializeSwiper = (slides, swiperSettings) => {
   });
   swiper.on("slideChange", function () {
     setclassList(this.activeIndex);
+    // window.history.pushState(null, null, '#' + slides[this.activeIndex].title)
   });
   swiper.init();
 }

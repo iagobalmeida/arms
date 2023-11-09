@@ -12,17 +12,20 @@ const swiperSettings = {
 
 const initializeSwiper = (swiperSettings) => {
   const swiper = new Swiper(".swiper", swiperSettings);
-  const targetSection = window.location.href.split("/#")[1];
-  swiper.on("init", function () {
-  });
-  swiper.on("slideChange", function () {
-  });
   swiper.init();
   document.querySelector('#button-slide-next').addEventListener('click', () => {
-    swiper.slideNext();
+    if(swiper.isEnd) {
+      swiper.slideTo(0)
+    } else {
+      swiper.slideNext();
+    }
   });
   document.querySelector('#button-slide-prev').addEventListener('click', () => {
-    swiper.slidePrev();
+    if(swiper.isStart) {
+      swiper.slideTo(swiper.slides.length-1)
+    } else {
+      swiper.slidePrev();
+    }
   });
 }
 
