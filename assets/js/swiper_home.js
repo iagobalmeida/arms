@@ -34,7 +34,6 @@ const swiperSettings = {
 };
 
 const initializeSwiper = (slides, swiperSettings) => {
-  const slidesTitles = slides.map((s) => s.title);
   
   const headerEl = document.querySelector("header");
   const swiper = new Swiper(".swiper", swiperSettings);
@@ -51,12 +50,7 @@ const initializeSwiper = (slides, swiperSettings) => {
   const targetSection = decodeURIComponent(window.location.hash.substring(1))
   
   swiper.on("init", function () {
-    if (slidesTitles.includes(targetSection)) {
-      const slideIndex = slidesTitles.indexOf(targetSection);
-      swiper.slideTo(slideIndex);
-    } else {
-      setclassList(this.activeIndex);
-    }
+    setclassList(this.activeIndex);
   });
   swiper.on("slideChange", function () {
     setclassList(this.activeIndex);

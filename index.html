@@ -60,13 +60,13 @@
 
       <!-- Social Icons -->
       <div class="flex flex-row gap-4 items-center relative pr-12">
-        <div class="mr-16">
+        <div class="mr-16 hidden md:block">
           <svg xmlns="http://www.w3.org/2000/svg" width="34" height="2" viewBox="0 0 34 2" fill="currentColor">
             <path d="M0 1H34" stroke="currentColor"/>
           </svg>
         </div>
         <a
-          class="cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto"
+          class="hidden md:block cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto"
           href=""
         >
           <svg
@@ -83,7 +83,7 @@
           </svg>
         </a>
         <a
-          class="cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto"
+          class="hidden md:block cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto"
           href=""
         >
           <svg
@@ -108,7 +108,7 @@
           </svg>
         </a>
         <a
-          class="cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto"
+          class="hidden md:block cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto"
           href=""
         >
           <svg
@@ -127,7 +127,7 @@
           </svg>
         </a>
         <a
-          class="cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto"
+          class="hidden md:block cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto"
           href=""
         >
           <svg
@@ -144,7 +144,7 @@
           </svg>
         </a>
         <div
-          class="swiper-pagination z-40 right-36 hidden sm:block pointer-events-auto"
+          class="swiper-pagination z-40 right-36 pointer-events-auto"
         ></div>
       </div>
     </header>
@@ -153,12 +153,30 @@
       <!-- Swiper -->
       <div class="swiper-wrapper">
         <!-- Screen 01 - Somos -->
-        <div data-hash="somos" class="swiper-slide grid h-screen w-screen grid-rows-2 grid-cols-2 bg-arms-black light">
+        <div data-hash="somos" class="swiper-slide grid h-screen w-screen md:grid-rows-2 md:grid-cols-2 bg-arms-black light">
             <!-- Image -->
-            <img src="assets/imgs/home_01.png" alt="" class="home-img">
-            <!-- Content -->
-            <div class="bg-arms-blue row-start-2 col-start-1 anim-slide"></div>
-            <div class="row-start-2 col-start-2 grid grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 grid-rows-4">
+            <img src="assets/imgs/home_01.png" alt="" class="hidden md:block home-img">
+            <!-- Content Mobile -->
+            <div class="flex justify-end flex-col md:hidden">
+              <div class="px-8 pb-8">
+                <h5 class="text-arms-white leading-none font-extrabold anim-slide anim-slide-down text-title mb-3">somos</h5>
+                <p class="text-arms-white font-light text-xl">
+                    especialista em branding, apaixonados por design e o braço amigo que faltava para o seu projeto.
+                    <br>
+                    <br>
+                    Construímos marcas, cultivamos conexões e apreciamos resultados.
+                </p>
+              </div>
+              <a href="criamos.html" class="text-black bg-white flex justify-center items-center gap-4 text-lg anim-slide anim-slide-up py-6">
+                  NOSSOS SERVIÇOS
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="9" viewBox="0 0 32 9" fill="currentColor">
+                    <path d="M32 4.48623L27.1335 0L26.2145 0.84865L29.5402 3.91408H0V5.11464H29.5207L26.2275 8.15135L27.1465 9L32 4.52573L31.9792 4.50539L32 4.48623Z" fill="currentColor"/>
+                  </svg>
+              </a>
+            </div>
+            <!-- Content Desktop -->
+            <div class="bg-arms-blue row-start-2 col-start-1 anim-slide hidden md:block"></div>
+            <div class="row-start-2 col-start-2 grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 grid-rows-4 hidden md:grid">
                 <div class="col-span-5 row-span-3 px-28">
                     <h5 class="text-arms-white leading-none font-extrabold anim-slide anim-slide-down text-title">somos</h5>
                     <p class="text-arms-white font-light text-xl">
@@ -177,29 +195,52 @@
             </div>
         </div>
         <!-- Screen 02 - Capicce -->
-        <div data-hash="capricho" class="swiper-slide grid h-screen w-screen grid-rows-3 grid-cols-9 bg-arms-white">
+        <div data-hash="capricho" class="swiper-slide grid h-screen w-screen md:grid-rows-3 md:grid-cols-9 bg-arms-white">
             <!-- Header -->
-            <div class="col-span-9"></div>
+            <div class="col-span-9 hidden md:block"></div>
             <!-- Image -->
-            <img src="assets/imgs/home_02.png" alt="" class="home-img right-0">
+            <img src="assets/imgs/home_02.png" alt="" class="home-img right-0 hidden md:block">
+            <!-- Content mobile -->
+            <div class="flex justify-end flex-col md:hidden">
+              <div class="px-8 pb-8">
+                <h5 class="leading-none font-extrabold anim-slide anim-slide-down text-title mb-3">capicce!</h5>
+                <p class="font-light text-xl">
+                  Acreditamos que o detalhe sempre faz a diferença.
+                  <br>
+                  Respiramos design e prezamos por dar sentido
+                  <br>
+                  a tudo que criamos.
+                  <br>
+                  De um jeito funcional e com a estética apurada,
+                  <br>
+                  o capricho faz parte do nosso dia-a-dia. 
+                </p>
+              </div>
+              <a href="work.html" class="bg-arms-black text-arms-white flex justify-center items-center gap-4 text-lg anim-slide anim-slide-up py-6">
+                NOSSOS CAPRICHOS
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="9" viewBox="0 0 32 9" fill="currentColor">
+                  <path d="M32 4.48623L27.1335 0L26.2145 0.84865L29.5402 3.91408H0V5.11464H29.5207L26.2275 8.15135L27.1465 9L32 4.52573L31.9792 4.50539L32 4.48623Z" fill="currentColor"/>
+                </svg>
+              </a>
+            </div>
             <!-- Content -->
-            <div class="col-start-2 col-span-5 grid grid-rows-2 grid-cols-5">
+            <div class="col-start-2 col-span-5 grid-rows-2 grid-cols-5 hidden md:grid">
                 <h5 class="col-span-3 leading-none font-extrabold anim-slide anim-slide-down text-title">capicce!</h5>
                 <span class="row-start-2 col-span-3 font-light text-xl">
-                    Acreditamos que o detalhe sempre faz a diferença.
-                    <br>
-                    Respiramos design e prezamos por dar sentido
-                    <br>
-                    a tudo que criamos.
-                    <br>
-                    De um jeito funcional e com a estética apurada,
-                    <br>
-                    o capricho faz parte do nosso dia-a-dia. 
+                  Acreditamos que o detalhe sempre faz a diferença.
+                  <br>
+                  Respiramos design e prezamos por dar sentido
+                  <br>
+                  a tudo que criamos.
+                  <br>
+                  De um jeito funcional e com a estética apurada,
+                  <br>
+                  o capricho faz parte do nosso dia-a-dia. 
                 </span>
             </div>
-            <div class="col-span-3 bg-arms-yellow anim-slide anim-slide-up"></div>
+            <div class="col-span-3 bg-arms-yellow anim-slide anim-slide-up hidden md:block"></div>
             
-            <div class="bg-arms-gray grid grid-rows-3 col-span-6 grid-cols-2">
+            <div class="bg-arms-gray grid-rows-3 col-span-6 grid-cols-2 hidden md:grid">
               <a href="work.html" class="row-span-1 bg-arms-black text-white anim-slide anim-slide-up grid grid-cols-3">
                 <div class="col-start-2 col-span-2 flex items-center gap-4 text-lg">
                   NOSSOS CAPRICHOS
@@ -209,17 +250,38 @@
                 </div>
               </a>
             </div>
-            <div class="col-span-3 bg-arms-yellow"></div>
+            <div class="col-span-3 bg-arms-yellow hidden md:block"></div>
         </div>
         <!-- Screen 03 - Método -->
-        <div data-hash="método" class="swiper-slide grid h-screen w-screen grid-rows-3 grid-cols-9 bg-arms-yellow">
+        <div data-hash="metodo" class="swiper-slide grid h-screen w-screen md:grid-rows-3 md:grid-cols-9 bg-arms-yellow">
             <!-- Header -->
             <div class="col-span-9"></div>
             <!-- Image -->
-            <img src="assets/imgs/home_03.png" alt="" class="home-img">
+            <img src="assets/imgs/home_03.png" alt="" class="hidden md:block home-img">
+            <!-- Content mobile -->
+            <div class="flex justify-end flex-col md:hidden">
+              <div class="px-8 pb-8">
+                <h5 class="leading-none font-extrabold anim-slide anim-slide-down text-title mb-3">método</h5>
+                <p class="font-light text-xl">
+                  Do logo ao tipo, da identidade ao visual.
+                  <br>
+                  Os processos aqui são fragmentados em etapas
+                  <br>
+                  para cada profissional extrair o seu melhor em cada job,
+                  <br>
+                  refletindo diretamente na qualidade da entrega.
+                </p>
+              </div>
+              <a href="fluxo.html" class="bg-arms-black text-arms-white flex justify-center items-center gap-4 text-lg anim-slide anim-slide-up py-6">
+                  COMO CRIAMOS
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="9" viewBox="0 0 32 9" fill="currentColor">
+                    <path d="M32 4.48623L27.1335 0L26.2145 0.84865L29.5402 3.91408H0V5.11464H29.5207L26.2275 8.15135L27.1465 9L32 4.52573L31.9792 4.50539L32 4.48623Z" fill="currentColor"/>
+                  </svg>
+              </a>
+            </div>
             <!-- Content -->
-            <div class="col-span-3 bg-arms-white"></div>
-            <div class="col-span-6 grid grid-cols-4 grid-rows-2 ps-11">
+            <div class="hidden md:block col-span-3 bg-arms-white"></div>
+            <div class="hidden md:grid col-span-6 grid-cols-4 grid-rows-2 ps-11">
                 <h5 class="col-start-2 col-span-2 leading-none font-extrabold anim-slide anim-slide-down text-title">método</h5>
                 <span class="col-start-2 col-span-2 font-light text-xl">
                     Do logo ao tipo, da identidade ao visual.
@@ -233,7 +295,7 @@
             </div>
 
             <!-- Footer -->
-            <div class="col-span-6 bg-white grid grid-cols-4 grid-rows-3">
+            <div class="hidden md:grid col-span-6 bg-white grid-cols-4 grid-rows-3">
                 <a href="fluxo.html" class="col-start-4 bg-arms-black flex items-center ps-11 text-arms-white gap-4 text-lg">
                     COMO CRIAMOS
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="9" viewBox="0 0 32 9" fill="currentColor">
@@ -241,28 +303,25 @@
                     </svg>
                 </a>
             </div>
-            <div class="col-span-3 bg-arms-yellow grid grid-rows-3">
+            <div class="hidden md:grid col-span-3 bg-arms-yellow grid-rows-3">
                 <div class="bg-arms-black"></div>
             </div>
         </div>
         <!-- Screen 03 - Conte -->
-        <div data-hash="conta" class="swiper-slide grid h-screen w-screen grid-rows-2 grid-cols-2 bg-arms-black">
+        <div data-hash="conta" class="swiper-slide grid h-screen w-screen md:grid-rows-2 md:grid-cols-2 bg-arms-black">
           <!-- Image -->
-          <img src="assets/imgs/home_04.png" alt="" class="home-img">
-          <!-- Content -->
-          <div class="col-start-2 flex flex-col justify-end ps-11 pb-11">
-              <h5 class="leading-none font-extrabold anim-slide anim-slide-down text-title text-arms-white">conte</h5>
-              <span class="font-light text-xl text-arms-white">
+          <img src="assets/imgs/home_04.png" alt="" class="hidden md:block home-img">
+          <!-- Content Mobile -->
+            <div class="flex justify-end flex-col md:hidden">
+              <div class="px-8 pb-8">
+                <h5 class="leading-none font-extrabold anim-slide anim-slide-down text-title mb-3">conte</h5>
+                <p class="font-light text-xl text-arms-white">
                   pra gente! Adoramos ouvir histórias
                   <br>
                   e amamos fazer parte delas.
-              </span>
-          </div>
-          <div class="row-start-2 bg-arms-yellow grid grid-rows-2 grid-cols-2 anim-slide anim-slide-up">
-              <div class="col-start-2 row-start-2 bg-arms-white"></div>
-          </div>
-          <div class="row-start-2 grid grid-rows-2 grid-cols-3">
-              <div class="col-span-2 flex flex-col gap-9 px-10">
+                </p>
+              </div>
+              <div class="col-span-2 flex flex-col gap-9 px-10 pb-8">
                 <input class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="nome" id="input-nome" placeholder="nome:">
                 <div class="flex flex-row gap-9 justify-stretch items-center">
                   <input class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="numero" id="input-numero" placeholder="número:">
@@ -270,32 +329,60 @@
                 </div>
                 <textarea class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" name="mensagem" id="input-mensagem" placeholder="conta tudo:"></textarea>
               </div>
-              <div class="grid grid-rows-5 col-span-3">
-                  <a class="row-span-2 text-arms-white bg-arms-blue flex pl-10 items-center gap-4 text-lg anim-slide anim-slide-up cursor-pointer">
-                      ENVIAR
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="9" viewBox="0 0 32 9" fill="currentColor">
-                        <path d="M32 4.48623L27.1335 0L26.2145 0.84865L29.5402 3.91408H0V5.11464H29.5207L26.2275 8.15135L27.1465 9L32 4.52573L31.9792 4.50539L32 4.48623Z" fill="currentColor"/>
-                      </svg>
-                  </a>
-                  <div class="bg-arms-white row-span-3 grid grid-cols-3">
-                      <div class="flex flex-col items-start justify-center text-arms-black">
-                          <b>OFFICE</b>
-                          <p>
-                              Rua Regente Feijó, 673
-                              <br>
-                              Centro - Piracicaba-SP
-                          </p>
-                      </div>
-                      <div class="flex flex-col items-start justify-center text-arms-black">
-                          <b>CONTACT</b>
-                          <p>
-                              conte@arms.design
-                              <br>
-                              19 96404.4711
-                          </p>
-                      </div>
-                  </div>
+              <a href="fluxo.html" class="bg-arms-blue text-arms-white flex justify-center items-center gap-4 text-lg anim-slide anim-slide-up py-6">
+                  ENVIAR
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="9" viewBox="0 0 32 9" fill="currentColor">
+                    <path d="M32 4.48623L27.1335 0L26.2145 0.84865L29.5402 3.91408H0V5.11464H29.5207L26.2275 8.15135L27.1465 9L32 4.52573L31.9792 4.50539L32 4.48623Z" fill="currentColor"/>
+                  </svg>
+              </a>
+            </div>
+          <!-- Content -->
+          <div class="col-start-2 hidden md:flex flex-col justify-end ps-11 pb-11">
+              <h5 class="leading-none font-extrabold anim-slide anim-slide-down text-title text-arms-white">conte</h5>
+              <span class="font-light text-xl text-arms-white">
+                  pra gente! Adoramos ouvir histórias
+                  <br>
+                  e amamos fazer parte delas.
+              </span>
+          </div>
+          <div class="row-start-2 bg-arms-yellow hidden md:grid grid-rows-2 grid-cols-2 anim-slide anim-slide-up">
+              <div class="col-start-2 row-start-2 bg-arms-white"></div>
+          </div>
+          <div class="row-start-2 hidden md:grid grid-rows-2 grid-cols-3">
+            <div class="col-span-2 flex flex-col gap-9 px-10">
+              <input class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="nome" id="input-nome" placeholder="nome:">
+              <div class="flex flex-row gap-9 justify-stretch items-center">
+                <input class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="numero" id="input-numero" placeholder="número:">
+                <input class="w-full bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="email" id="input-email" placeholder="e-mail:">
               </div>
+              <textarea class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" name="mensagem" id="input-mensagem" placeholder="conta tudo:"></textarea>
+            </div>
+            <div class="grid grid-rows-5 col-span-3">
+                <a class="row-span-2 text-arms-white bg-arms-blue flex pl-10 items-center gap-4 text-lg anim-slide anim-slide-up cursor-pointer">
+                    ENVIAR
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="9" viewBox="0 0 32 9" fill="currentColor">
+                      <path d="M32 4.48623L27.1335 0L26.2145 0.84865L29.5402 3.91408H0V5.11464H29.5207L26.2275 8.15135L27.1465 9L32 4.52573L31.9792 4.50539L32 4.48623Z" fill="currentColor"/>
+                    </svg>
+                </a>
+                <div class="bg-arms-white row-span-3 grid grid-cols-3">
+                    <div class="flex flex-col items-start justify-center text-arms-black">
+                        <b>OFFICE</b>
+                        <p>
+                            Rua Regente Feijó, 673
+                            <br>
+                            Centro - Piracicaba-SP
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-start justify-center text-arms-black">
+                        <b>CONTACT</b>
+                        <p>
+                            conte@arms.design
+                            <br>
+                            19 96404.4711
+                        </p>
+                    </div>
+                </div>
+            </div>
           </div>
         </div>
       </div>

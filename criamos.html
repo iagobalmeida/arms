@@ -15,7 +15,7 @@
     <link href="./assets/css/styles.css" rel="stylesheet" type="text/css" />
   </head>
 
-  <body class="criamos h-screen overflow-y-hidden">
+  <body class="criamos md:h-screen md:overflow-y-hidden">
     <header
       class="fixed h-1/4 flex flex-row items-center justify-between px-12 sm:px-24 left-0 top-0 right-0 z-20 pointer-events-none light"
     >
@@ -58,7 +58,7 @@
             </defs>
           </svg>
         </a>
-        <a href="./index.html#capicce" class="cursor-pointer pointer-events-auto mt-5" id="page-back-nagivation">
+        <a href="./index.html#capicce" class="cursor-pointer pointer-events-auto mt-5 hidden md:block" id="page-back-nagivation">
           <svg
           xmlns="http://www.w3.org/2000/svg"
           width="53"
@@ -83,15 +83,15 @@
       </div>
 
       <!-- Social Icons -->
-      <div class="flex flex-row gap-4 items-center relative pr-12">
+      <div class="flex flex-row gap-4 items-center relative md:pr-12">
         <p class="text-2xl text-white">o estúdio</p>
-        <div class="mr-16">
+        <div class="mr-16 hidden md:block">
           <svg xmlns="http://www.w3.org/2000/svg" width="34" height="2" viewBox="0 0 34 2" fill="currentColor">
             <path d="M0 1H34" stroke="currentColor"/>
           </svg>
         </div>
         <a
-          class="cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto"
+          class="cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto hidden md:block"
           href=""
         >
           <svg
@@ -108,7 +108,7 @@
           </svg>
         </a>
         <a
-          class="cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto"
+          class="cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto hidden md:block"
           href=""
         >
           <svg
@@ -133,7 +133,7 @@
           </svg>
         </a>
         <a
-          class="cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto"
+          class="cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto hidden md:block"
           href=""
         >
           <svg
@@ -152,7 +152,7 @@
           </svg>
         </a>
         <a
-          class="cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto"
+          class="cursor-pointer hover:opacity-75 transition-opacity pointer-events-auto hidden md:block"
           href=""
         >
           <svg
@@ -169,16 +169,16 @@
           </svg>
         </a>
         <div
-          class="swiper-pagination z-40 right-36 hidden sm:block pointer-events-auto"
+          class="swiper-pagination z-40 right-36 pointer-events-auto"
         ></div>
       </div>
     </header>
-    <!-- Slider main container -->
-    <main class="w-full h-full flex flex-col sm:flex-row items-end">
+    <!-- Dekstop container -->
+    <main class="w-full h-full flex-row items-end hidden md:flex">
       <div class="w-full h-2/3 grid grid-cols-9 items-end relative">
 
         <div class="h-full text-arms-white col-span-5">
-          <h5 class=" text-center font-bold leading-none -mt-10 mb-20 anim-slide anim-slide-down">criamos</h5>
+          <h5 class=" text-center font-bold leading-none -mt-10 mb-20 anim-slide anim-slide-down text-title">criamos</h5>
         </div>
 
         <div class="h-full transition-colors ease-in-out bg-arms-blue anim-slide anim-slide-up col-span-4" style="margin-left: 12px">
@@ -186,7 +186,6 @@
         </div>
 
         <div class="absolute right-0 bottom-0 grid grid-cols-4 w-full" style="height: 75%;">
-          <!-- Slider main container -->
           <div class="h-full flex flex-col anim-slide col-span-3" id="cards-wrapper">
             <div class="h-32 flex flex-row bg-arms-black relative">
               <div class="absolute w-1/4 h-full bg-white z-10 tab-indicator">
@@ -376,8 +375,247 @@
         </div>
       </div>
     </main>
+    <!-- Mobile container -->
+    <div class="max-w-full pt-32 flex justify-end flex-col md:hidden">
+      <div class="px-8 row-start-3 pb-8">
+        <h1 class="text-arms-white leading-none font-extrabold anim-slide anim-slide-down text-title mb-3">criamos</h1>
+      </div>
+      <div class="w-full">
+        <div class="swiper">
+          <div class="swiper-wrapper max-h-full">
+            <!-- Slides -->
+            <div class="swiper-slide bg-white px-8 py-10 grid grid-cols-1 gap-8 relative">
+              <h3 class="text-xl flex flex-row gap-4 items-center">
+                <svg class="transition-transform rotate-90" xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+                  <g clip-path="url(#clip0_218_172)">
+                    <path d="M18 6.97859L11.0085 -4.81197e-07L9.68815 1.32012L14.466 6.09044L-3.45819e-07 6.08858L-2.64187e-07 7.95611L14.438 7.95611L9.7068 12.6799L11.0271 14L18 7.04003" fill="currentColor"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_218_172">
+                      <rect width="14" height="18" fill="currentColor" transform="translate(0 14) rotate(-90)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+                BRANDING
+              </h3>
+              <div class="absolute top-9 right-8 opacity-50">
+                <svg class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+                  <g clip-path="url(#clip0_218_172)">
+                    <path d="M18 6.97859L11.0085 -4.81197e-07L9.68815 1.32012L14.466 6.09044L-3.45819e-07 6.08858L-2.64187e-07 7.95611L14.438 7.95611L9.7068 12.6799L11.0271 14L18 7.04003" fill="currentColor"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_218_172">
+                      <rect width="14" height="18" fill="currentColor" transform="translate(0 14) rotate(-90)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="flex flex-col gap-4">
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Naming</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    A partir de estudos, pesquisas, validações e técnicas de criação, conseguimos chegar  no melhor nome com disponibilidade de registro para o seu negócio.Quebramos tabu e desvendamos mitos. Você fará parte de todo processo.
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Tom de voz</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Redesign</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Logotipo</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Comunicação Visual</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Brand Experience</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Publicidade, impressos, endomarketing, etc...
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Identidade Visual</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Diagnóstico da marca</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Brand performance</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Seo
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide bg-white px-8 py-10 grid grid-cols-1 gap-8 relative">
+              <h3 class="text-xl flex flex-row gap-4 items-center">
+                <svg class="transition-transform rotate-90" xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+                  <g clip-path="url(#clip0_218_172)">
+                    <path d="M18 6.97859L11.0085 -4.81197e-07L9.68815 1.32012L14.466 6.09044L-3.45819e-07 6.08858L-2.64187e-07 7.95611L14.438 7.95611L9.7068 12.6799L11.0271 14L18 7.04003" fill="currentColor"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_218_172">
+                      <rect width="14" height="18" fill="currentColor" transform="translate(0 14) rotate(-90)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+                ILUSTRAÇÃO
+              </h3>
+              <div class="absolute top-9 right-8 opacity-50">
+                <svg class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+                  <g clip-path="url(#clip0_218_172)">
+                    <path d="M18 6.97859L11.0085 -4.81197e-07L9.68815 1.32012L14.466 6.09044L-3.45819e-07 6.08858L-2.64187e-07 7.95611L14.438 7.95611L9.7068 12.6799L11.0271 14L18 7.04003" fill="currentColor"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_218_172">
+                      <rect width="14" height="18" fill="currentColor" transform="translate(0 14) rotate(-90)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="flex flex-col gap-4">
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Naming</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    A partir de estudos, pesquisas, validações e técnicas de criação, conseguimos chegar  no melhor nome com disponibilidade de registro para o seu negócio.Quebramos tabu e desvendamos mitos. Você fará parte de todo processo.
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Tom de voz</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Redesign</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Logotipo</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Comunicação Visual</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Brand Experience</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Publicidade, impressos, endomarketing, etc...
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Identidade Visual</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Diagnóstico da marca</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                  </p>
+                </div>
+                <div data-tab-parent="0">
+                  <p class="text-arms-black text-base font-bold">Brand performance</p>
+                  <p class="text-xs leading-3">
+                    -<br>
+                    Seo
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="w-full bg-arms-blue">
+        <div class="flex flex-col gap-3 p-12" id="card-title-wrapper">
+          <h4 class="text-2xl font bold text-arms-white">
+            Oque é Branging?
+          </h4>
+          <p class="text-base text-arms-white">
+            O estúdio acredita que branding<br>
+            é um conjunto de processos que compõem<br>
+            um sistema de gestão de marca.As vezes sua empresa precisa apenas<br>
+            de alguma etapa desses processos, e, isso<br>
+            conseguimos identificar em nosso diagnóstico de marca.
+          </p>
+        </div>
+        <div class="flex flex-col w-full" id="card-nagivation-wrapper">
+          <a href="./work.html" id="button-slide-prev" class="button bg-arms-purple text-arms-white h-28">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="53"
+                height="16"
+                viewBox="0 0 53 16"
+                fill="currentColor"
+              >
+                <g clip-path="url(#clip0_75_278)">
+                  <path
+                    d="M53 7.97553L44.9399 0L43.4178 1.50871L48.9259 6.95837H0V9.0927H48.8936L43.4393 14.4913L44.9614 16L53 8.04575L52.9656 8.00957L53 7.97553Z"
+                    fill="currentColor"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_75_278">
+                    <rect width="53" height="16" fill="currentColor" />
+                  </clipPath>
+                </defs>
+              </svg>
+              CASES
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
     <!-- Scripts -->
     <script src="./assets/js/tabs_criamos.js" type="module"></script>
+    <script src="./assets/js/swiper_criamos.js" type="module"></script>
     <script src="./assets/js/auto_anim_slide.js" type="module"></script>
   </body>
 </html>
