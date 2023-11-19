@@ -1,0 +1,23 @@
+.single-work-footer {
+    grid-template-columns: 14% auto 14%;
+    
+}
+
+.work {
+    --swiper-pagination-color: white;
+    --swiper-pagination-bullet-inactive-color: black;
+    --swiper-pagination-top: 24px;
+
+    .swiper-pagination-bullet {
+      border-radius: 8px;
+    }
+
+    .swiper-pagination {
+        display: flex;
+        height: 10px;
+        justify-content: space-evenly;
+        .swiper-pagination-bullet {
+            height: 8px;
+        }
+    }
+}

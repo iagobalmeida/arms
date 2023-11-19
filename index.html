@@ -15,9 +15,9 @@
     <link href="./assets/css/styles.css" rel="stylesheet" type="text/css" />
   </head>
 
-  <body class="h-screen home ">
+  <body class="h-screen home">
     <header
-      class="fixed h-1/4 flex flex-row items-center justify-between px-12 sm:px-24 left-0 top-0 right-0 z-20 pointer-events-none"
+      class="fixed h-48 md:h-1/4 flex flex-row items-center justify-between px-12 sm:px-24 left-0 top-0 right-0 z-20 pointer-events-none"
     >
       <a href="./index.html" class="cursor-pointer pointer-events-auto">
         <!-- Logo -->
@@ -323,7 +323,7 @@
               </div>
               <div class="col-span-2 flex flex-col gap-9 px-10 pb-8">
                 <input class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="nome" id="input-nome" placeholder="nome:">
-                <div class="flex flex-row gap-9 justify-stretch items-center">
+                <div class="flex flex-col md:flex-row gap-9 justify-stretch md:items-center">
                   <input class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="numero" id="input-numero" placeholder="número:">
                   <input class="w-full bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="email" id="input-email" placeholder="e-mail:">
                 </div>
@@ -350,12 +350,12 @@
           </div>
           <div class="row-start-2 hidden md:grid grid-rows-2 grid-cols-3">
             <div class="col-span-2 flex flex-col gap-9 px-10">
-              <input class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="nome" id="input-nome" placeholder="nome:">
+              <input class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="nome" id="input-nome" placeholder="NOME:">
               <div class="flex flex-row gap-9 justify-stretch items-center">
-                <input class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="numero" id="input-numero" placeholder="número:">
-                <input class="w-full bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="email" id="input-email" placeholder="e-mail:">
+                <input class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="numero" id="input-numero" placeholder="NÚMERO:">
+                <input class="w-full bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" type="text" name="email" id="input-email" placeholder="E-MAIL:">
               </div>
-              <textarea class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" name="mensagem" id="input-mensagem" placeholder="conta tudo:"></textarea>
+              <textarea class="bg-transparent border-b-2 border-b-arms-black-600 text-arms-black-600" name="mensagem" id="input-mensagem" placeholder="CONTA TUDO:"></textarea>
             </div>
             <div class="grid grid-rows-5 col-span-3">
                 <a class="row-span-2 text-arms-white bg-arms-blue flex pl-10 items-center gap-4 text-lg anim-slide anim-slide-up cursor-pointer">
@@ -388,6 +388,7 @@
       </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./assets/js/home_form.js" type="module"></script>
     <script src="./assets/js/swiper_home.js" type="module"></script>
   </body>
 </html>

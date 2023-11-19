@@ -1,4 +1,7 @@
 .home {
+    input, textarea {
+      text-transform: uppercase;
+    }
     .swiper-pagination-bullet {
       border-radius: 0;
       width: 96px;
