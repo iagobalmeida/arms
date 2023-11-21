@@ -1234,6 +1234,14 @@ video {
       background: radial-gradient(#313030, var(--ARMS---black));
       color: white;
     }
+.home .swiper-slide {
+      height: 100% !important;
+      width: 100%;
+      max-width: 100%;
+      max-height: -webkit-fill-available;
+      min-height: 0;
+      min-width: 0;
+    }
 .home .swiper-slide.light h5,
         .home .swiper-slide.light p{
       --tw-text-opacity: 1;
@@ -1611,7 +1619,7 @@ header.light {
 .swiper-wrapper {
   width: 100%;
   max-width: 100%;
-  max-height: 100vh;
+  max-height: -webkit-fill-available;
   min-height: 0;
   min-width: 0;
 }
